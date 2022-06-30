@@ -74,6 +74,7 @@
             <groupId>com.mattmalec</groupId>
             <artifactId>Pterodactyl4J</artifactId>
             <version>2.BETA_134</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.dv8tion</groupId>
@@ -85,11 +86,13 @@
                     <artifactId>opus-java</artifactId>
                 </exclusion>
             </exclusions>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>me.carleslc.Simple-YAML</groupId>
             <artifactId>Simple-Yaml</artifactId>
             <version>1.8</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
