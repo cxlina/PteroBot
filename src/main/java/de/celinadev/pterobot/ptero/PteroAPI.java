@@ -8,18 +8,18 @@ import de.celinadev.pterobot.util.LogUtil;
 
 public class PteroAPI {
 
-    private PteroClient client;
-    private PteroApplication app;
+    private final PteroClient client;
+    private final PteroApplication app;
 
     public PteroAPI() {
         String apiKey = Main.getInstance().getConfig().getFile().getString("pteroApiKey", "invalid");
         String apiUrl = Main.getInstance().getConfig().getFile().getString("pteroApiUrl", "invalid");
         if (apiKey.equals("invalid")) {
-            LogUtil.error("Ptero", "Missing or invalid API key.", "line1", "line2");
+            LogUtil.error("Ptero", "Missing or invalid API key.", "at: config.yml");
             System.exit(0);
         }
         if (apiUrl.equals("invalid")) {
-            LogUtil.log("Ptero", "Missing or invalid API URL.");
+            LogUtil.error("Ptero", "Missing or invalid API URL.", "at: config.yml");
             System.exit(0);
         }
         this.client = PteroBuilder.createClient(apiUrl, apiKey);
