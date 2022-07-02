@@ -15,6 +15,7 @@ public class Main {
         this.config = new Configuration("config");
         this.bot = new Bot();
         this.pteroAPI = new PteroAPI();
+
     }
 
     public static void main(String[] args) {
