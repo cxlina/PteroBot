@@ -23,7 +23,7 @@ public class RestartServerCommand extends Command {
                 String id = args[0];
                 try {
                     ClientServer server = Main.getInstance().getPteroAPI().getClient().retrieveServerByIdentifier(id).execute();
-                    server.start().execute();
+                    server.restart().execute();
                     message.reply("Restarting the Server " + server.getName()).queue();
                 } catch (NotFoundException e) {
                     message.reply("There's no existing server with this ID.").queue();

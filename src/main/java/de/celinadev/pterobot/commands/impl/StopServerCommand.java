@@ -13,7 +13,7 @@ public class StopServerCommand extends Command {
 
     @Override
     public String getName() {
-        return "start";
+        return "stop";
     }
 
     @Override
@@ -28,7 +28,7 @@ public class StopServerCommand extends Command {
                 } catch (NotFoundException e) {
                     message.reply("There's no existing server with this ID.").queue();
                 }
-            } else message.reply("Please use ;start <server-id>").queue();
+            } else message.reply("Please use ;stop <server-id>").queue();
         } else message.reply("You don't have the required Permissions for this Command.").queue();
     }
 }
